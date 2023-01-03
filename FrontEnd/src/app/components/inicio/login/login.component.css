@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+h3{
+    font-family: 'Rowdies', cursive;
+}
+button{
+    margin: 20px 10px;
+}
+a{
+    font-weight: bold;
+    text-decoration: none;
+}
