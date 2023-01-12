@@ -1,0 +1,17 @@
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.DataAccess\bin\Debug\net6.0\Demo.DataAccess.deps.json
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.DataAccess\bin\Debug\net6.0\Demo.DataAccess.runtimeconfig.json
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.DataAccess\bin\Debug\net6.0\Demo.DataAccess.dll
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.DataAccess\bin\Debug\net6.0\Demo.DataAccess.pdb
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.DataAccess\bin\Debug\net6.0\Demo.Entities.dll
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.DataAccess\bin\Debug\net6.0\Demo.Entities.pdb
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.DataAccess\obj\Debug\net6.0\Demo.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.DataAccess\obj\Debug\net6.0\Demo.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.DataAccess\obj\Debug\net6.0\Demo.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.DataAccess\obj\Debug\net6.0\Demo.DataAccess.AssemblyInfo.cs
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.DataAccess\obj\Debug\net6.0\Demo.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.DataAccess\obj\Debug\net6.0\Demo.DataAccess.csproj.CopyComplete
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.DataAccess\obj\Debug\net6.0\Demo.DataAccess.dll
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.DataAccess\obj\Debug\net6.0\refint\Demo.DataAccess.dll
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.DataAccess\obj\Debug\net6.0\Demo.DataAccess.pdb
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.DataAccess\obj\Debug\net6.0\Demo.DataAccess.genruntimeconfig.cache
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.DataAccess\obj\Debug\net6.0\ref\Demo.DataAccess.dll

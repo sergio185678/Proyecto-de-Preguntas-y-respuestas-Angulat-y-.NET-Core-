@@ -1,0 +1,12 @@
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.Service\bin\Debug\net6.0\Demo.Service.deps.json
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.Service\bin\Debug\net6.0\Demo.Service.dll
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.Service\bin\Debug\net6.0\Demo.Service.pdb
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.Service\obj\Debug\net6.0\Demo.Service.csproj.AssemblyReference.cache
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.Service\obj\Debug\net6.0\Demo.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.Service\obj\Debug\net6.0\Demo.Service.AssemblyInfoInputs.cache
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.Service\obj\Debug\net6.0\Demo.Service.AssemblyInfo.cs
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.Service\obj\Debug\net6.0\Demo.Service.csproj.CoreCompileInputs.cache
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.Service\obj\Debug\net6.0\Demo.Service.dll
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.Service\obj\Debug\net6.0\refint\Demo.Service.dll
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.Service\obj\Debug\net6.0\Demo.Service.pdb
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.Service\obj\Debug\net6.0\ref\Demo.Service.dll
