@@ -10,3 +10,8 @@ C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto par
 C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.Service\obj\Debug\net6.0\refint\Demo.Service.dll
 C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.Service\obj\Debug\net6.0\Demo.Service.pdb
 C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.Service\obj\Debug\net6.0\ref\Demo.Service.dll
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.Service\bin\Debug\net6.0\Demo.DataAccess.dll
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.Service\bin\Debug\net6.0\Demo.Entities.dll
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.Service\bin\Debug\net6.0\Demo.DataAccess.pdb
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.Service\bin\Debug\net6.0\Demo.Entities.pdb
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Demo.Service\obj\Debug\net6.0\Demo.Service.csproj.CopyComplete

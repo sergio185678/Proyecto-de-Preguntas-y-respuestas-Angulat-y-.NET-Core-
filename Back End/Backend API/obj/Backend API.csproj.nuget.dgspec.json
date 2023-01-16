@@ -30,6 +30,12 @@
             "projectReferences": {
               "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Demo.DataAccess\\Demo.DataAccess.csproj": {
                 "projectPath": "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Demo.DataAccess\\Demo.DataAccess.csproj"
+              },
+              "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Demo.Entities\\Demo.Entities.csproj": {
+                "projectPath": "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Demo.Entities\\Demo.Entities.csproj"
+              },
+              "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Demo.Service\\Demo.Service.csproj": {
+                "projectPath": "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Demo.Service\\Demo.Service.csproj"
               }
             }
           }
@@ -46,17 +52,17 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.1, )"
+              "version": "[7.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.1, )"
+              "version": "[7.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.1, )"
+              "version": "[7.0.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -196,6 +202,74 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Demo.Service\\Demo.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Demo.Service\\Demo.Service.csproj",
+        "projectName": "Demo.Service",
+        "projectPath": "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Demo.Service\\Demo.Service.csproj",
+        "packagesPath": "C:\\Users\\Sergio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Demo.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Sergio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Demo.DataAccess\\Demo.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Demo.DataAccess\\Demo.DataAccess.csproj"
+              },
+              "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Demo.Entities\\Demo.Entities.csproj": {
+                "projectPath": "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Demo.Entities\\Demo.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

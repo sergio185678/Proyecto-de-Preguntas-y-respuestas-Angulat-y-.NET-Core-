@@ -1,4 +1,5 @@
 using Demo.DataAccess;
+using Demo.Service;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,9 @@ builder.Services.AddDbContext<DemoDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
 /////////////////////
+
+builder.Services.AddScoped<IUserService, UserService>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -26,6 +30,14 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+//permite habilitar que el front utilize esto
+app.UseCors(options =>
+{
+    options.WithOrigins("http://localhost:4200/");
+    options.AllowAnyMethod();
+    options.AllowAnyHeader();
+});
 
 app.MapControllers();
 

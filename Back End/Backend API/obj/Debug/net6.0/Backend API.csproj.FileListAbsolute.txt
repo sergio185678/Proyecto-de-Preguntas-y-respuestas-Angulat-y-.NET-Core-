@@ -84,3 +84,5 @@ C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto par
 C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Backend API\obj\Debug\net6.0\Backend API.pdb
 C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Backend API\obj\Debug\net6.0\Backend API.genruntimeconfig.cache
 C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Backend API\obj\Debug\net6.0\ref\Backend API.dll
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Backend API\bin\Debug\net6.0\Demo.Service.dll
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Backend API\bin\Debug\net6.0\Demo.Service.pdb
