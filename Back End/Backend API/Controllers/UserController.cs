@@ -1,4 +1,6 @@
-﻿using Demo.Entities;
+﻿using Backend_API.Utils;
+using Demo.Dto;
+using Demo.Entities;
 using Demo.Service;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.TagHelpers.Cache;
@@ -40,6 +42,7 @@ namespace Backend_API.Controllers
                 {
                     return BadRequest(new { message = "El usuario " + usuario.NombreUsuario + " ya existe!" });
                 }
+                usuario.Password=Encriptar.EncriptarPasword(usuario.Password);
                 await _userService.CreateUsuario(usuario);
                 //quiero que en esta ruta me regresa la info
                 return CreatedAtRoute("GetUsuario", new { id = usuario.Id }, usuario);
@@ -70,6 +73,36 @@ namespace Backend_API.Controllers
             }
             await _userService.UpdateUsuario(usuario);
             return NoContent();
+        }
+        //localhost:____/api/User/CambiarPassword
+        [Route("CambiarPassword")]
+        [HttpPut]
+        public async Task<ActionResult> CambiarPassword([FromBody] CambiarPasswordDTO cambiarPassword)
+        {
+            try
+            {
+                //probando temporalmente un con id fijo
+                int id = 4;
+                string passwordEncriptado = Encriptar.EncriptarPasword(cambiarPassword.passwordAnterior);
+                //valida ya con la password encriptada
+                var usuario=await _userService.ValidarPassword(id, passwordEncriptado);
+                if (usuario == null)
+                {
+                    return BadRequest(new { message = "Password incorrecto" });
+                }
+                else
+                {
+                    usuario.Password = Encriptar.EncriptarPasword(cambiarPassword.nuevaPassword);
+                    await _userService.UpdatePassword(usuario);
+                    return Ok(new { message = "La contraseña se actualizo" });
+                }
+                
+            }
+            catch (Exception err)
+            {
+
+                return BadRequest(err.Message);
+            }
         }
     }
 }

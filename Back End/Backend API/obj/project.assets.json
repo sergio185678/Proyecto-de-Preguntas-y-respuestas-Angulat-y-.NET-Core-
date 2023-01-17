@@ -1258,6 +1258,16 @@
           "bin/placeholder/Demo.DataAccess.dll": {}
         }
       },
+      "Demo.Dto/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Demo.Dto.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Demo.Dto.dll": {}
+        }
+      },
       "Demo.Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -3962,6 +3972,11 @@
       "path": "../Demo.DataAccess/Demo.DataAccess.csproj",
       "msbuildProject": "../Demo.DataAccess/Demo.DataAccess.csproj"
     },
+    "Demo.Dto/1.0.0": {
+      "type": "project",
+      "path": "../Demo.Dto/Demo.Dto.csproj",
+      "msbuildProject": "../Demo.Dto/Demo.Dto.csproj"
+    },
     "Demo.Entities/1.0.0": {
       "type": "project",
       "path": "../Demo.Entities/Demo.Entities.csproj",
@@ -3976,6 +3991,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Demo.DataAccess >= 1.0.0",
+      "Demo.Dto >= 1.0.0",
       "Demo.Entities >= 1.0.0",
       "Demo.Service >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.2",
@@ -4013,6 +4029,9 @@
           "projectReferences": {
             "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Demo.DataAccess\\Demo.DataAccess.csproj": {
               "projectPath": "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Demo.DataAccess\\Demo.DataAccess.csproj"
+            },
+            "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Demo.Dto\\Demo.Dto.csproj": {
+              "projectPath": "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Demo.Dto\\Demo.Dto.csproj"
             },
             "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Demo.Entities\\Demo.Entities.csproj": {
               "projectPath": "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Demo.Entities\\Demo.Entities.csproj"

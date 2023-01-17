@@ -47,10 +47,21 @@ namespace Demo.Service
             await _context.SaveChangesAsync();
         }
 
+        public async Task<Usuario> ValidarPassword(int id, string passwordAnterior)
+        {
+            var usuario=await _context.Usuarios.Where(u => u.Id == id && u.Password==passwordAnterior).FirstOrDefaultAsync();
+            return usuario;
+        }
+
         public async Task<bool> ValidateExistence(Usuario usuario)
         {
             //retorna tru o false
             return await _context.Usuarios.AnyAsync(x => x.NombreUsuario == usuario.NombreUsuario);
+        }
+        public async Task UpdatePassword(Usuario usuario)
+        {
+            _context.Update(usuario);
+            await _context.SaveChangesAsync();
         }
     }
 }

@@ -15,5 +15,7 @@ namespace Demo.Service
         Task<List<Usuario>> GetUsuarios();
         Task UpdateUsuario(Usuario usuario);
         Task<bool> ValidateExistence(Usuario usuario);
+        Task<Usuario> ValidarPassword(int id, string passwordAnterior);
+        Task UpdatePassword(Usuario usuario);
     }
 }

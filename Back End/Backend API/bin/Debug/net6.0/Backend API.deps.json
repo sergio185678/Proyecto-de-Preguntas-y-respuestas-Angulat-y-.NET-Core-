@@ -9,6 +9,7 @@
       "Backend API/1.0.0": {
         "dependencies": {
           "Demo.DataAccess": "1.0.0",
+          "Demo.Dto": "1.0.0",
           "Demo.Entities": "1.0.0",
           "Demo.Service": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.2",
@@ -760,6 +761,11 @@
           "Demo.DataAccess.dll": {}
         }
       },
+      "Demo.Dto/1.0.0": {
+        "runtime": {
+          "Demo.Dto.dll": {}
+        }
+      },
       "Demo.Entities/1.0.0": {
         "runtime": {
           "Demo.Entities.dll": {}
@@ -1302,6 +1308,11 @@
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
     },
     "Demo.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Demo.Dto/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

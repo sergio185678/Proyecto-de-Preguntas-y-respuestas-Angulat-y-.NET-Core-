@@ -13,6 +13,7 @@ builder.Services.AddDbContext<DemoDBContext>(options =>
 /////////////////////
 
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ILoginService, LoginService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -34,7 +35,7 @@ app.UseAuthorization();
 //permite habilitar que el front utilize esto
 app.UseCors(options =>
 {
-    options.WithOrigins("http://localhost:4200/");
+    options.WithOrigins("http://localhost:4200");
     options.AllowAnyMethod();
     options.AllowAnyHeader();
 });

@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Demo.DataAccess\Demo.DataAccess.csproj" />
+    <ProjectReference Include="..\Demo.Dto\Demo.Dto.csproj" />
     <ProjectReference Include="..\Demo.Entities\Demo.Entities.csproj" />
     <ProjectReference Include="..\Demo.Service\Demo.Service.csproj" />
   </ItemGroup>
