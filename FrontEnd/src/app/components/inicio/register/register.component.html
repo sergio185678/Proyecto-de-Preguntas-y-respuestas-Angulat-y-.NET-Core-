@@ -3,8 +3,8 @@
         <div class="col-lg-6 offset-lg-3">
             <div class="card text-center" style="padding:20px;">
                 <h3>Registrarse</h3>
-                <br>
-                <form [formGroup]="register" (ngSubmit)="registrarUsuario()">
+                <app-loading *ngIf="loading"></app-loading>
+                <form [formGroup]="register" (ngSubmit)="registrarUsuario()" style="padding-top: 10px;">
                     <div class="form-group" style="text-align: start;">
                         <input type="text" class="form-control" placeholder="Usuario" formControlName="usuario">
                         <span class="text-danger"

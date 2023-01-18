@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "4YLDjkeIW4nQAYos3rHfvBX/V3nRnuOIywSowOSTV5sN5+B/TvkSSqEhfw6Y6ZYCEuKKSs8e5oNOPK2tJFFZBw==",
+  "dgSpecHash": "SHn/0Tkx8piOrIGWqaEM7xHZosikW8sHw30w8+lZHzJWWnJoJDRpX3zdg8VwxaiauQwIOX7BFd3FVpi1E1xg+g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Backend API\\Backend API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sergio\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Sergio\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\Sergio\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Sergio\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.13\\microsoft.aspnetcore.authentication.jwtbearer.6.0.13.nupkg.sha512",
     "C:\\Users\\Sergio\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Sergio\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Sergio\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",

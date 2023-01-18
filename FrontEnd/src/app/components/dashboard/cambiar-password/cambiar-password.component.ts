@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-cambiar-password',
@@ -8,7 +11,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class CambiarPasswordComponent {
   cambiarpassword:FormGroup;
-  constructor(private fb:FormBuilder){
+  loading=false;
+  constructor(private fb:FormBuilder, private userService:UsuarioService,private toastr:ToastrService,private router:Router){
     this.cambiarpassword=this.fb.group({
       passwordAnterior:['',Validators.required],
       nuevapassword:['',[Validators.required,Validators.minLength(4)]],
@@ -21,6 +25,21 @@ export class CambiarPasswordComponent {
     return pass===confirmpass?null:{notSame:true};
   }
   guardarpassword(){
-    console.log(this.cambiarpassword);
+    this.loading=true;
+    const changePassword:any={
+      passwordAnterior:this.cambiarpassword.value.passwordAnterior,
+      nuevaPassword:this.cambiarpassword.value.nuevapassword
+    };
+    this.userService.changePassword(changePassword).subscribe(data=>{
+      this.loading=false;
+      //probando utilizando el mensaje return OK del backend
+      this.toastr.info(data.message);
+
+      this.router.navigate(['/dashboard'])
+    },error=>{
+      this.loading=false;
+      this.cambiarpassword.reset();
+      this.toastr.error(error.error.message,'Error!');
+    })
   }
 }

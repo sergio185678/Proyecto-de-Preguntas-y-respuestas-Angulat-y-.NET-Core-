@@ -6,20 +6,25 @@ import { Usuario } from '../models/user';
 @Injectable({
   providedIn: 'root'
 })
-export class UsuarioService {
+export class LoginService {
 
   AppUrl:string;
   ApiUrl:string;
 
   constructor(private http:HttpClient) { 
     this.AppUrl='https://localhost:7224';
-    this.ApiUrl='/api/User';
+    this.ApiUrl='/api/Login';
   }
-
-  saveUser(usuario:Usuario): Observable<any>{
+  login(usuario:Usuario):Observable<any>{
     return this.http.post(this.AppUrl+this.ApiUrl,usuario);
   }
-  changePassword(cambiarpassword:any):Observable<any>{
-    return this.http.put(this.AppUrl+this.ApiUrl+'/CambiarPassword',cambiarpassword)
+  setSession(data:string):void{
+    localStorage.setItem('nombreUsuario',data);
+  }
+  getNombreUsuario():string|null{
+    return localStorage.getItem('nombreUsuario');
+  }
+  removelocalStorage(){
+    localStorage.removeItem('nombreUsuario');
   }
 }

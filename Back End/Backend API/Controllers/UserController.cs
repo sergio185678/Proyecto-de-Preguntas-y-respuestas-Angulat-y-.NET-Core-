@@ -83,6 +83,7 @@ namespace Backend_API.Controllers
             {
                 //probando temporalmente un con id fijo
                 int id = 4;
+                //contra 1234
                 string passwordEncriptado = Encriptar.EncriptarPasword(cambiarPassword.passwordAnterior);
                 //valida ya con la password encriptada
                 var usuario=await _userService.ValidarPassword(id, passwordEncriptado);

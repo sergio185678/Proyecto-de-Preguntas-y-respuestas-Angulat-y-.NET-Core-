@@ -11,9 +11,11 @@ namespace Backend_API.Controllers
     public class LoginController : ControllerBase
     {
         private readonly ILoginService _loginService;
-        public LoginController(ILoginService loginService)
+        private readonly IConfiguration _configuration;
+        public LoginController(ILoginService loginService, IConfiguration configuration)
         {
             this._loginService = loginService;
+            this._configuration = configuration;
         }
         [HttpPost]
         public async Task<ActionResult> Post([FromBody]Usuario usuario)
@@ -26,7 +28,9 @@ namespace Backend_API.Controllers
                 {
                     return BadRequest(new { message="Usuario o contraseña invalidos" });
                 }
-                return Ok(new { usuario = user.NombreUsuario });
+                //JWT
+                string tokenString = JwtConfigurator.GetToken(user,this._configuration);
+                return Ok(new { token = tokenString });
             }
             catch (Exception err)
             {
