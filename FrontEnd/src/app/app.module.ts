@@ -6,7 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 
 //componentes
 import { AppComponent } from './app.component';
@@ -19,6 +19,9 @@ import { CambiarPasswordComponent } from './components/dashboard/cambiar-passwor
 import { CuestionariosComponent } from './components/dashboard/cuestionarios/cuestionarios.component';
 import { NavbarComponent } from './components/dashboard/navbar/navbar.component';
 import { LoadingComponent } from './shared/loading/loading.component';
+
+//Interceptor
+import { AddTokenInterceptor } from './helpers/add-token.interceptor';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,11 @@ import { LoadingComponent } from './shared/loading/loading.component';
     ToastrModule.forRoot(), // ToastrModule added
     HttpClientModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AddTokenInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -13,6 +13,6 @@ export class CuestionariosComponent implements OnInit{
     this.getNombreUsuario();
   }
   getNombreUsuario(){
-    this.nombreUsuario= this.loginService.getNombreUsuario();
+    this.nombreUsuario= this.loginService.getTokenDecoded().sub;
   }
 }

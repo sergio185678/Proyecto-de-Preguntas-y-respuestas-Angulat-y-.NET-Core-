@@ -2,8 +2,11 @@
 using Demo.Dto;
 using Demo.Entities;
 using Demo.Service;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.TagHelpers.Cache;
+using System.Security.Claims;
 
 namespace Backend_API.Controllers
 {
@@ -74,15 +77,17 @@ namespace Backend_API.Controllers
             await _userService.UpdateUsuario(usuario);
             return NoContent();
         }
+        
         //localhost:____/api/User/CambiarPassword
         [Route("CambiarPassword")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]//solo poniendo autentifiacion con Jwt
         [HttpPut]
         public async Task<ActionResult> CambiarPassword([FromBody] CambiarPasswordDTO cambiarPassword)
         {
             try
             {
-                //probando temporalmente un con id fijo
-                int id = 4;
+                var identity=HttpContext.User.Identity as ClaimsIdentity;
+                int id = JwtConfigurator.GetTokenIdUsuario(identity);
                 //contra 1234
                 string passwordEncriptado = Encriptar.EncriptarPasword(cambiarPassword.passwordAnterior);
                 //valida ya con la password encriptada

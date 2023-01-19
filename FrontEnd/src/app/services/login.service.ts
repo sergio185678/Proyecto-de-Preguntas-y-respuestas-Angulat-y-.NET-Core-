@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { JwtHelperService } from '@auth0/angular-jwt';
 import { Observable } from 'rxjs';
 import { Usuario } from '../models/user';
 
@@ -19,12 +20,21 @@ export class LoginService {
     return this.http.post(this.AppUrl+this.ApiUrl,usuario);
   }
   setSession(data:string):void{
-    localStorage.setItem('nombreUsuario',data);
+    localStorage.setItem('token',data);
   }
-  getNombreUsuario():string|null{
-    return localStorage.getItem('nombreUsuario');
-  }
+  // getNombreUsuario():string|null{
+  //   return localStorage.getItem('nombreUsuario');
+  // }
   removelocalStorage(){
-    localStorage.removeItem('nombreUsuario');
+    localStorage.removeItem('token');
+  }
+  getTokenDecoded(){
+    const helper=new JwtHelperService();
+    const token=localStorage.getItem('token');
+    if(typeof token == 'string') {
+      const decoderToken=helper.decodeToken(token);
+      return decoderToken;
+    }
+    return null;
   }
 }

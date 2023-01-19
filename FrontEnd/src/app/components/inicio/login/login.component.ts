@@ -28,7 +28,7 @@ export class LoginComponent{
     this.loading=true;
     this.loginService.login(usuario).subscribe(data=>{
       this.loading=false;
-      this.loginService.setSession(data.usuario)
+      this.loginService.setSession(data.token)//guardo el token en el localstorage
       this.router.navigate(['/dashboard']);
     },error=>{
       this.loading=false;

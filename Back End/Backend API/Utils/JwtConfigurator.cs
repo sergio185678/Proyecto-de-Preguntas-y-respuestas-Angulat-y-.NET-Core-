@@ -31,5 +31,21 @@ namespace Backend_API.Utils
                 );
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
+        public static int GetTokenIdUsuario(ClaimsIdentity identity)
+        {
+            if(identity != null)
+            {
+                IEnumerable<Claim> claims=identity.Claims;
+                foreach(var claim in claims)
+                {
+                    if(claim.Type== "idUsuario")
+                    {
+                        return int.Parse(claim.Value);
+                    }
+                }
+            }
+            return 0;
+        }
     }
 }
