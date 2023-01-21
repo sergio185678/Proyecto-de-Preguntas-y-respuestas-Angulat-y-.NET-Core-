@@ -1,0 +1,21 @@
+<form [formGroup]="nuevaPregunta">
+    <div class="form-label input-group-lg">
+        <input type="text" class="form-control" placeholder="Ingrese Pregunta">
+    </div>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Respuesta 1">
+        <!-- Para unir los 2 el texto con el boton de forma perfecta -->
+        <div class="input-group-text">
+            <input type="radio" name="esCorrecta">
+        </div>
+        <span class="material-icons delete-icon">
+            delete
+        </span>
+    </div>
+    <span class="material-icons add-icon">
+        add
+    </span>
+    <br>
+    <br>
+    <button class="btn btn-primary float-end">Agregar</button>
+</form>
