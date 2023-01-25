@@ -1,21 +1,33 @@
 <form [formGroup]="nuevaPregunta">
     <div class="form-label input-group-lg">
-        <input type="text" class="form-control" placeholder="Ingrese Pregunta">
-    </div>
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Respuesta 1">
-        <!-- Para unir los 2 el texto con el boton de forma perfecta -->
-        <div class="input-group-text">
-            <input type="radio" name="esCorrecta">
-        </div>
-        <span class="material-icons delete-icon">
-            delete
+        <input type="text" class="form-control" placeholder="Ingrese Pregunta" formControlName="titulo">
+        <span class="text-danger" *ngIf="nuevaPregunta.get('titulo')?.hasError('required') && nuevaPregunta.get('titulo')?.touched">
+            La pregunta es <strong>requerida</strong>
         </span>
     </div>
-    <span class="material-icons add-icon">
+    <br>
+    <!-- Estoy utilizando FormArray -->
+    <div formArrayName="respuestas" *ngFor="let item of getRespuestas.controls; let i=index">
+        <div class="input-group mb-1" [formGroupName]="i">
+            <input type="text" class="form-control" placeholder="Respuesta {{i+1}}" formControlName="descripcion">
+            <!-- Para unir los 2 el texto con el boton de forma perfecta -->
+            <div class="input-group-text">
+                <input type="radio" name="esCorrecta" formControlName="esCorrecta" [value]="i" (change)="setRespuestaValida(i)">
+            </div>
+            <span class="material-icons delete-icon" (click)="eliminarRespuesta(i)">
+                delete
+            </span>
+        </div>
+        <!-- La validacion aca se utiliza utilizando item  pzra referir especificamente a un elemento-->
+        <span class="text-danger" *ngIf="item.get('descripcion')?.hasError('required') && item.get('descripcion')?.touched">
+            La respuesta es <strong>requerida</strong>
+        </span>
+    </div>
+    
+    <span class="material-icons add-icon" (click)="agregarRespuesta()">
         add
     </span>
     <br>
     <br>
-    <button class="btn btn-primary float-end">Agregar</button>
+    <button class="btn btn-primary float-end" [disabled]="nuevaPregunta.invalid" (click)="agregarPregunta()">Agregar</button>
 </form>

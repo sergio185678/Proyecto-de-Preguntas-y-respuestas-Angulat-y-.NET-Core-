@@ -1,7 +1,32 @@
+<div class="text-center">
+    <app-loading *ngIf="loading==true"></app-loading>
+</div>
 <div class="row">
     <div class="col-lg-6">
         <h3 class="text-center">Listado de Preguntas</h3>
         <hr>
+        <div class="card mb-2" *ngFor="let pregunta of listPreguntas; let i=index">
+            <div class="card-header d-flex align-items-center">
+                <div style="width: 70%;">
+                    <h5>{{pregunta.descripcion}}</h5>
+                </div>
+                <div style="width: 30%;">
+                    <button class="btn btn-primary btn-sm" (click)="pregunta.hide=!pregunta.hide">Mostrar</button>
+                    <button class="btn btn-danger btn-sm ms-2" (click)="eliminarPregunta(i)">Eliminar</button>
+                </div>
+            </div>
+            <div class="card-body" [hidden]="pregunta.hide">
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let respuesta of pregunta.listRespuestas"
+                    [ngClass]="{'list-group-item-success':respuesta.esCorrecta==true}">
+                        {{respuesta.descripcion}}
+                        <span class="material-icons" *ngIf="respuesta.esCorrecta==true">
+                            check_circle
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div *ngIf="listPreguntas?.length==0">
             <h6>No hay preguntas para mostrar</h6>
         </div>
@@ -9,7 +34,8 @@
     <div class="col-lg-6">
         <h3 class="text-center">Nueva Pregunta</h3>
         <hr>
-        <app-nueva-pregunta></app-nueva-pregunta>
+        <!-- primero llamo () el output, y al costado la funcion de este .ts  -->
+        <app-nueva-pregunta (enviarPregunta)="guardarPregunta($event)"></app-nueva-pregunta>
     </div>
 </div>
-<button class="btn btn-success btn-lg btnFinalizar" [disabled]="listPreguntas?.length==0">Finalizar Cuestionario</button>
+<button class="btn btn-success btn-lg btnFinalizar" [disabled]="listPreguntas?.length==0" (click)="finalizarCuestionario()">Finalizar Cuestionario</button>

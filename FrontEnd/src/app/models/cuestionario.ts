@@ -1,4 +1,5 @@
 import { Pregunta } from "./pregunta";
+import { Usuario } from "./user";
 
 export class Cuestionario{
     id?:number;

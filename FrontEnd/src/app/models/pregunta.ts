@@ -7,5 +7,6 @@ export class Pregunta{
     constructor(descripcion:string,listrespuestas:Respuesta[]){
         this.descripcion=descripcion;
         this.listRespuestas=listrespuestas;
+        this.hide=true;
     }
 }
