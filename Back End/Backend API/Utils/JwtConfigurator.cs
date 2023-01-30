@@ -26,7 +26,7 @@ namespace Backend_API.Utils
                 issuer: Issuer,
                 audience: Audience,
                 claims,
-                expires: DateTime.Now.AddMinutes(60),//tiempo que el token dure
+                expires: DateTime.Now.AddDays(1),//tiempo que el token dure(1dia)
                 signingCredentials: credentials
                 );
             return new JwtSecurityTokenHandler().WriteToken(token);

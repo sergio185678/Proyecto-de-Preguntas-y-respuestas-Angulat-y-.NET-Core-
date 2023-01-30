@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="card text-center" style="width: 100%; padding: 21px;">
+        <div class="col-lg-6 offset-lg-3">
+            <input id="nombre" type="text" class="form-control form-control-lg" placeholder="Ingrese su nombre" (keyup)=actualizar()>
+        </div>
+        <div class="mt-auto" style="padding-top:25px;">
+            <button class="btn btn-primary btn-lg" routerLink="/inicio/ListCuestionarios">VOLVER</button>
+            <button id="boton_sig" class="btn btn-primary btn-lg btn-sig" (click)="siguiente()" disabled>SIGUIENTE</button>
+        </div>
+    </div>
+</div>

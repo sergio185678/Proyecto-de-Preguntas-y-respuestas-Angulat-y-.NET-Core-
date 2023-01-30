@@ -1,0 +1,14 @@
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-sig{
+    background-color: orange;
+    border-color: orange;
+    margin-left: 10px;
+}
+input[placeholder]{
+    text-align: center;
+}

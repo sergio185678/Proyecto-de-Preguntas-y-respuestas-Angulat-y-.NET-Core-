@@ -3,3 +3,12 @@
     border-radius: 300px;
     background-color: rgb(65, 172, 65);
 }
+.radius{
+    width: 100px;
+    border-radius: 300px;
+    margin-left: 10px;
+}
+.gap{
+    gap:10px;
+    
+}

@@ -1,0 +1,18 @@
+.material-icons{
+    float: right;
+    color: #17a2b7;
+    font-size: 25px;
+    margin-left: -25px;/*hago que siga pareciendo en el medio */
+}
+.card-header{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+.pregunta{
+    margin-bottom: 30px;
+}
+.btn-lg{
+    width: 250px;
+    color: white;
+}

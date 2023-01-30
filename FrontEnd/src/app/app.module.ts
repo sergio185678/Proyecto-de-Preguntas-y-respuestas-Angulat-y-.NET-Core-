@@ -26,6 +26,11 @@ import { NuevoCuestionarioComponent } from './components/dashboard/cuestionarios
 import { Paso1Component } from './components/dashboard/cuestionarios/nuevo-cuestionario/paso1/paso1.component';
 import { Paso2Component } from './components/dashboard/cuestionarios/nuevo-cuestionario/paso2/paso2.component';
 import { NuevaPreguntaComponent } from './components/dashboard/cuestionarios/nuevo-cuestionario/paso2/nueva-pregunta/nueva-pregunta.component';
+import { CuestionarioComponent } from './components/dashboard/cuestionarios/cuestionario/cuestionario.component';
+import { ListCuestionariosComponent } from './components/inicio/list-cuestionarios/list-cuestionarios.component';
+import { IngresarNombreComponent } from './components/inicio/list-cuestionarios/ingresar-nombre/ingresar-nombre.component';
+import { PreguntaComponent } from './components/inicio/list-cuestionarios/pregunta/pregunta.component';
+import { RespuestaCuestionarioComponent } from './components/inicio/list-cuestionarios/respuesta-cuestionario/respuesta-cuestionario.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +47,12 @@ import { NuevaPreguntaComponent } from './components/dashboard/cuestionarios/nue
     NuevoCuestionarioComponent,
     Paso1Component,
     Paso2Component,
-    NuevaPreguntaComponent
+    NuevaPreguntaComponent,
+    CuestionarioComponent,
+    ListCuestionariosComponent,
+    IngresarNombreComponent,
+    PreguntaComponent,
+    RespuestaCuestionarioComponent
   ],
   imports: [
     BrowserModule,
