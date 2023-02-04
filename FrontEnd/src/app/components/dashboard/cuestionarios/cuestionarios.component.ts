@@ -40,7 +40,6 @@ export class CuestionariosComponent implements OnInit{
         this.getCuestionarios();
       },error=>{
         this.loading=false;
-        this.toastr.error('Opps.. Ocurrio un error','Error');
       })
     }
   }

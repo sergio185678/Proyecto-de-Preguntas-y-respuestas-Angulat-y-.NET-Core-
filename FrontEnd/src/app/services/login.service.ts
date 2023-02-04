@@ -22,9 +22,6 @@ export class LoginService {
   setSession(data:string):void{
     localStorage.setItem('token',data);
   }
-  // getNombreUsuario():string|null{
-  //   return localStorage.getItem('nombreUsuario');
-  // }
   removelocalStorage(){
     localStorage.removeItem('token');
   }
@@ -36,5 +33,9 @@ export class LoginService {
       return decoderToken;
     }
     return null;
+  }
+
+  getToken(){
+    return localStorage.getItem('token')
   }
 }

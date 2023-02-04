@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Demo.DataAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class v12 : Migration
+    public partial class v14 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -72,6 +72,29 @@ namespace Demo.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "RespuestaCuestionarios",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    NombreParticipante = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Fecha = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Activo = table.Column<int>(type: "int", nullable: false),
+                    CuestionarioId = table.Column<int>(type: "int", nullable: false),
+                    Status = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RespuestaCuestionarios", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_RespuestaCuestionarios_Cuestionarios_CuestionarioId",
+                        column: x => x.CuestionarioId,
+                        principalTable: "Cuestionarios",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Respuestas",
                 columns: table => new
                 {
@@ -93,6 +116,33 @@ namespace Demo.DataAccess.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "RespuestaCuestionarioDetalles",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    RespuestaCuestionarioId = table.Column<int>(type: "int", nullable: false),
+                    RespuestaId = table.Column<int>(type: "int", nullable: false),
+                    Status = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RespuestaCuestionarioDetalles", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_RespuestaCuestionarioDetalles_RespuestaCuestionarios_RespuestaCuestionarioId",
+                        column: x => x.RespuestaCuestionarioId,
+                        principalTable: "RespuestaCuestionarios",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_RespuestaCuestionarioDetalles_Respuestas_RespuestaId",
+                        column: x => x.RespuestaId,
+                        principalTable: "Respuestas",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Cuestionarios_UsuarioId",
                 table: "Cuestionarios",
@@ -104,6 +154,21 @@ namespace Demo.DataAccess.Migrations
                 column: "CuestionarioId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_RespuestaCuestionarioDetalles_RespuestaCuestionarioId",
+                table: "RespuestaCuestionarioDetalles",
+                column: "RespuestaCuestionarioId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_RespuestaCuestionarioDetalles_RespuestaId",
+                table: "RespuestaCuestionarioDetalles",
+                column: "RespuestaId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_RespuestaCuestionarios_CuestionarioId",
+                table: "RespuestaCuestionarios",
+                column: "CuestionarioId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Respuestas_PreguntaId",
                 table: "Respuestas",
                 column: "PreguntaId");
@@ -112,6 +177,12 @@ namespace Demo.DataAccess.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "RespuestaCuestionarioDetalles");
+
+            migrationBuilder.DropTable(
+                name: "RespuestaCuestionarios");
+
             migrationBuilder.DropTable(
                 name: "Respuestas");
 

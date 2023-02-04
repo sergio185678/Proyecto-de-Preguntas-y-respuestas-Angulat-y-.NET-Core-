@@ -1,0 +1,31 @@
+import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Cuestionario } from 'src/app/models/cuestionario';
+import { RespuestaCuestionarioDetalle } from 'src/app/models/respuestaCuestionarioDetalle';
+import { RespuestaCuestionarioService } from 'src/app/services/respuesta-cuestionario.service';
+
+@Component({
+  selector: 'app-detalle-respuesta',
+  templateUrl: './detalle-respuesta.component.html',
+  styleUrls: ['./detalle-respuesta.component.css']
+})
+export class DetalleRespuestaComponent {
+  idRespuesta_Cues:number=0;
+  cuestionario!:Cuestionario;
+  loading=false;
+  respuestas:RespuestaCuestionarioDetalle[]=[];
+
+  constructor(private aroute:ActivatedRoute,private res_cues_service:RespuestaCuestionarioService){
+    this.idRespuesta_Cues=+this.aroute.snapshot.paramMap.get('id')!;
+    this.getListResyCues();
+  }
+
+  getListResyCues(){
+    this.loading=true;
+    this.res_cues_service.getCuestionariobyidres_cues(this.idRespuesta_Cues).subscribe(data=>{
+      this.cuestionario=data.cuestionario;
+      this.respuestas=data.respuesta;
+      this.loading=false;
+    })
+  }
+}

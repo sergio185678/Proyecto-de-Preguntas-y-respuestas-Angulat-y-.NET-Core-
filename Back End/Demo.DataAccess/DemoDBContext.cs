@@ -22,5 +22,7 @@ namespace Demo.DataAccess
         public DbSet<Cuestionario> Cuestionarios { get; set; }
         public DbSet<Pregunta> Preguntas { get; set; }
         public DbSet<Respuesta> Respuestas { get; set; }
+        public DbSet<RespuestaCuestionario> RespuestaCuestionarios { get; set; }
+        public DbSet<RespuestaCuestionarioDetalle> RespuestaCuestionarioDetalles { get; set; }
     }
 }

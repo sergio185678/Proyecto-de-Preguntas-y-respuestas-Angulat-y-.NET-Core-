@@ -110,6 +110,63 @@ namespace Demo.DataAccess.Migrations
                     b.ToTable("Respuestas");
                 });
 
+            modelBuilder.Entity("Demo.Entities.RespuestaCuestionario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Activo")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CuestionarioId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("NombreParticipante")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CuestionarioId");
+
+                    b.ToTable("RespuestaCuestionarios");
+                });
+
+            modelBuilder.Entity("Demo.Entities.RespuestaCuestionarioDetalle", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("RespuestaCuestionarioId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RespuestaId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RespuestaCuestionarioId");
+
+                    b.HasIndex("RespuestaId");
+
+                    b.ToTable("RespuestaCuestionarioDetalles");
+                });
+
             modelBuilder.Entity("Demo.Entities.Usuario", b =>
                 {
                     b.Property<int>("Id")
@@ -167,6 +224,36 @@ namespace Demo.DataAccess.Migrations
                     b.Navigation("Pregunta");
                 });
 
+            modelBuilder.Entity("Demo.Entities.RespuestaCuestionario", b =>
+                {
+                    b.HasOne("Demo.Entities.Cuestionario", "Cuestionario")
+                        .WithMany()
+                        .HasForeignKey("CuestionarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cuestionario");
+                });
+
+            modelBuilder.Entity("Demo.Entities.RespuestaCuestionarioDetalle", b =>
+                {
+                    b.HasOne("Demo.Entities.RespuestaCuestionario", "RespuestaCuestionario")
+                        .WithMany("ListRtaCuestionarioDetalle")
+                        .HasForeignKey("RespuestaCuestionarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Demo.Entities.Respuesta", "Respuesta")
+                        .WithMany()
+                        .HasForeignKey("RespuestaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Respuesta");
+
+                    b.Navigation("RespuestaCuestionario");
+                });
+
             modelBuilder.Entity("Demo.Entities.Cuestionario", b =>
                 {
                     b.Navigation("listPreguntas");
@@ -175,6 +262,11 @@ namespace Demo.DataAccess.Migrations
             modelBuilder.Entity("Demo.Entities.Pregunta", b =>
                 {
                     b.Navigation("listRespuestas");
+                });
+
+            modelBuilder.Entity("Demo.Entities.RespuestaCuestionario", b =>
+                {
+                    b.Navigation("ListRtaCuestionarioDetalle");
                 });
 #pragma warning restore 612, 618
         }

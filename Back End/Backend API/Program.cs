@@ -21,6 +21,7 @@ builder.Services.AddDbContext<DemoDBContext>(options =>
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ILoginService, LoginService>();
 builder.Services.AddScoped<ICuestionarioService, CuestionarioService>();
+builder.Services.AddScoped<IRespuestaCuestionarioService, RespuestaCuestionarioService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

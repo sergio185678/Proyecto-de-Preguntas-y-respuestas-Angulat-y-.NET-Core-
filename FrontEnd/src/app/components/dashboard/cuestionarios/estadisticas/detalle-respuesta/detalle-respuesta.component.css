@@ -1,0 +1,21 @@
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    text-align: center;
+}
+.corr{
+    float: right;
+    color: blue;
+    font-size: 27px;
+    margin-left: -27px;
+}
+.incor{
+    float: right;
+    color: red;
+    font-size: 27px;
+    margin-left: -27px;
+}
