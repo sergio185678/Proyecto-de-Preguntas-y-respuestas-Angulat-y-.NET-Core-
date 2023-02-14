@@ -1,4 +1,19 @@
-a:hover{
+.ca:hover{
     text-decoration: underline;
-    
+    font-size: 1.1em;
+}
+.ca{
+    text-decoration: none;
+}
+img{
+    width: 6%;
+    height: 6%;
+}
+.cliccc{
+    cursor: pointer;
+}
+h5{
+    font-family: 'Rowdies', cursive;
+    color: #303030;
+    text-shadow: 1px 3px 3px rgb(85, 85, 85);
 }

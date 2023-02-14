@@ -87,7 +87,7 @@ export class PreguntaComponent {
 
     this.res_cues_service.guardarRespuestaCuestionario(RtaCuestionario).subscribe(data=>{
       this.loading=false;
-      this.router.navigate(['/inicio/respuesta_del_cuestionario'])
+      this.router.navigate(['/inicio/ListCuestionarios/respuesta_del_cuestionario'])
     },err=>{
       this.loading=false;
     })

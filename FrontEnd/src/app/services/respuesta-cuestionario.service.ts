@@ -33,4 +33,7 @@ export class RespuestaCuestionarioService {
   getCuestionariobyidres_cues(id:number):Observable<any>{
     return this.http.get(this.AppUrl+this.ApiUrl+"GetCuestionarioByIdRespuesta/"+id);
   }
+  getResCuesbythisid(id:number):Observable<any>{
+    return this.http.get(this.AppUrl+this.ApiUrl+"GetRespuestaCuestioanrio/"+id);
+  }
 }

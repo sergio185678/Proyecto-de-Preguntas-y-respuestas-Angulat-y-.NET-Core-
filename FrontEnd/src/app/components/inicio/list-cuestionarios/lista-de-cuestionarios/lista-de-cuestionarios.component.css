@@ -1,0 +1,35 @@
+.btn-ing,.btn-ing:active{
+    margin-top: 7px;
+    background-color: orange;
+    border-color: orange;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-style: italic;
+    font-family: Georgia, serif;
+    font-weight: bold;
+}
+.card_cues{
+    background-color: aquamarine;
+    border-radius: 12%;
+}
+.card-title{
+    text-decoration: underline;
+}
+.btn:hover{
+    border-width: 3px;
+    font-weight: bold;
+}
+.btn-secondary{
+    background-color: rgb(160, 160, 160);
+    border-color: rgb(160, 160, 160);
+}
+.card_grande{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}

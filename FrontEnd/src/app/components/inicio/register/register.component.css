@@ -10,3 +10,11 @@ h3{
 button{
     margin: 20px 10px;
 }
+.btn:hover{
+    border-width: 3px;
+    font-weight: bold;
+}
+.botones{
+    margin-bottom: -10px;
+    margin-top: 10px;
+}

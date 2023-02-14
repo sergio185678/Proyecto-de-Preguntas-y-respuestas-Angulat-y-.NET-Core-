@@ -11,8 +11,36 @@
 .list-group-item{
     cursor: pointer;
 }
+.list-group-item:hover{
+    background-color: rgb(187, 187, 187);
+}
 .btn-sig{
     margin-top: 20px;
     background-color: orange;
     border-color: orange;
+}
+h3{
+    font-style: italic;
+    font-family: Georgia, serif;
+    font-weight: bold;
+}
+.btn-sig,.btn-sig:active{
+    margin-top: 7px;
+    background-color: orange;
+    border-color: orange;
+}
+.btn:hover{
+    border-width: 3px;
+    font-weight: bold;
+}
+.active:hover{
+    background-color: var(--bs-list-group-active-bg);;
+}
+h5{
+    color: rgb(49, 49, 49);
+}
+.btn-fin,.btn-fin:active{
+    margin-top: 7px;
+    background-color: rgb(255, 17, 17);
+    border-color: rgb(214, 17, 17);
 }

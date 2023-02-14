@@ -1,7 +1,7 @@
 <div class="container">
-    <div class="card">
-        <h4>Resultado</h4>
-        <p class="card-text">Este es el resultado del cuestionario!</p>
+    <div class="card" style="padding-top: 40px;padding-bottom: 30px;">
+        <h1>Resultado</h1>
+        <p class="card-text">Has respondido correctamente {{cant_res_co}} de {{cuestionario.listPreguntas?.length}} preguntas</p>
         <div *ngFor="let pregunta of cuestionario.listPreguntas;let i=index" style="margin-bottom:20px; width: 80%; margin-left: auto;margin-right: auto;">
             <div class="card card-header">
                 <b>{{pregunta.descripcion}}</b>
@@ -22,7 +22,7 @@
         </div>
         <div class="row" style="margin-bottom:20px">
             <div class="col-lg-4 offset-lg-4">
-                <button class="btn btn-primary btn-lg btn-block" routerLink="/inicio">Volver</button>
+                <button class="btn btn-secondary btn-lg btn-block btn-volver" routerLink="/inicio/ListCuestionarios">Volver</button>
             </div>
         </div>
     </div>

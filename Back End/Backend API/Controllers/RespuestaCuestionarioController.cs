@@ -118,5 +118,28 @@ namespace Backend_API.Controllers
                 return BadRequest(err.Message);
             }
         }
+        [HttpGet("GetRespuestaCuestioanrio/{idRespuestaCuestionario}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<ActionResult> GetRespuestaCuestioanriobythisid(int idRespuestaCuestionario)
+        {
+            try
+            {
+                //obteniendo idUsuario
+                var identity = HttpContext.User.Identity as ClaimsIdentity;
+                int id_usuario = JwtConfigurator.GetTokenIdUsuario(identity);
+
+                var respuestaCuestionario = await _respuestaCuestionarioService.BuscarRespuestaCuestionario(idRespuestaCuestionario, id_usuario);
+                if (respuestaCuestionario == null)
+                {
+                    return BadRequest(new { message = "Error al buscar la respuesta del cuestionario" });
+                }
+                return Ok(new { respuestacuestionario = respuestaCuestionario});
+            }
+            catch (Exception err)
+            {
+
+                return BadRequest(err.Message);
+            }
+        }
     }
 }

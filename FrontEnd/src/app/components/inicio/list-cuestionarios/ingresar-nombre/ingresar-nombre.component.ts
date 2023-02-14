@@ -17,7 +17,7 @@ export class IngresarNombreComponent {
   }
   siguiente(){
     this.res_cues_services.nombreParticipante=(<HTMLInputElement>document.getElementById("nombre")).value;
-    this.router.navigate(["/inicio/pregunta"])
+    this.router.navigate(["/inicio/ListCuestionarios/pregunta"])
     
   }
   actualizar(){

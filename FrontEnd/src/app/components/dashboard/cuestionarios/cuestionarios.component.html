@@ -1,26 +1,29 @@
-<div class="jumbotron text-center">
-    <h1>Bienvenido {{nombreUsuario}}</h1>
-    <p class="lead text-muted">CUESTIONARIOS</p>
-    <div class="row">
-        <div class="col-lg-6 offset-lg-3">
-            <button class="btn btn-primary btn-block btn-cues" routerLink="/dashboard/nuevoCuestionario/paso1">NUEVO CUESTIONARIO</button>
-        </div>
+<div class="sffs">
+    <div class="jumbotron text-center">
+        <h1>Bienvenido "{{nombreUsuario}}"</h1><br>
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <button class="btn btn-primary btn-block btn-cues" routerLink="/dashboard/nuevoCuestionario/paso1">NUEVO CUESTIONARIO</button>
+            </div>
+        </div><br><br>
+        <h4 class="asd">TUS CUESTIONARIOS</h4>
     </div>
-</div>
-<div class="text-center mt-3">
-    <app-loading *ngIf="loading"></app-loading>
-</div>
-<div class="card-columns mt-3 d-flex gap flex-wrap">
-    <div class="card bg-light" style="width: 32%;" *ngFor="let cuestionario of lisCuestionarios">
-        <div class="card-body text-center">
-            <h4 class="card-title">{{cuestionario.nombre}}</h4>
-            <p class="card-text">{{cuestionario.descripcion}}</p>
-            <div class="row">
-                <button class="btn btn-success radius" routerLink="/dashboard/verCuestionario/{{cuestionario.id}}">VER</button>
-                <button class="btn btn-info radius" routerLink="/dashboard/estadisticas/{{cuestionario.id}}">INF</button>
+    
+    <div class="text-center mt-3">
+        <app-loading *ngIf="loading"></app-loading>
+    </div>
+    <div class="card-columns d-flex gap flex-wrap dff" style="margin-top: 30px;">
+        <div class="card bg-light carddddd" *ngFor="let cuestionario of lisCuestionarios">
+            <div class="card-body text-center">
+                <h4 class="card-title">{{cuestionario.nombre}}</h4>
+                <p class="card-text">{{cuestionario.descripcion}}</p>
+                <div class="fas">
+                    <button class="btn btn-success radius" routerLink="/dashboard/verCuestionario/{{cuestionario.id}}">VER</button>
+                    <button class="btn btn-info radius" routerLink="/dashboard/estadisticas/{{cuestionario.id}}">INFO</button>
+                </div>
                 <button class="btn btn-danger radius" (click)="eliminarCuestionario(cuestionario.id)">ELIMINAR</button>
             </div>
         </div>
     </div>
+    <h3 *ngIf="lisCuestionarios.length==0 && loading==false">No hay cuestionarios para mostrar</h3>
 </div>
-<h3 *ngIf="lisCuestionarios.length==0 && loading==false">No hay cuestionarios para mostrar</h3>

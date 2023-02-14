@@ -6,5 +6,14 @@
 .add-icon{
     font-size: 39px;
     cursor: pointer;
-    float: right;
+    display:block;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(214, 214, 214);
+    width: 80px;
+    border-radius: 10px;
+}
+.add-icon:hover{
+    background-color: rgb(255, 255, 255);
 }

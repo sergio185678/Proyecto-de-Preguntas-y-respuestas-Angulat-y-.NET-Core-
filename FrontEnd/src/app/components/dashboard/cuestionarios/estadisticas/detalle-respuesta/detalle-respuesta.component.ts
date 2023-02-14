@@ -14,10 +14,13 @@ export class DetalleRespuestaComponent {
   cuestionario!:Cuestionario;
   loading=false;
   respuestas:RespuestaCuestionarioDetalle[]=[];
+  nombre_del_que_resolvio!:string;
+  cant_res_co:number=0;
 
   constructor(private aroute:ActivatedRoute,private res_cues_service:RespuestaCuestionarioService){
     this.idRespuesta_Cues=+this.aroute.snapshot.paramMap.get('id')!;
     this.getListResyCues();
+    this.getRespu_Cues();
   }
 
   getListResyCues(){
@@ -26,6 +29,27 @@ export class DetalleRespuestaComponent {
       this.cuestionario=data.cuestionario;
       this.respuestas=data.respuesta;
       this.loading=false;
+      this.cantidad_res_corr();
     })
   }
+  getRespu_Cues(){
+    this.loading=true;
+    this.res_cues_service.getResCuesbythisid(this.idRespuesta_Cues).subscribe(data=>{
+      this.nombre_del_que_resolvio=data.respuestacuestionario.nombreParticipante;
+    })
+  }
+  cantidad_res_corr(){
+    for (let i = 0; i < this.cuestionario.listPreguntas!.length!; i++) {
+      var listRespuestasss=this.cuestionario.listPreguntas?.at(i)?.listRespuestas;
+      for (let j = 0; j < listRespuestasss?.length! ; j++) {
+        var respuesta=listRespuestasss?.at(j);
+        if(respuesta?.id==this.respuestas[i].respuestaId&&respuesta.esCorrecta==true){
+          this.cant_res_co++;
+          break;
+        }
+      }
+    }
+    console.log(this.cant_res_co);
+  }
+
 }

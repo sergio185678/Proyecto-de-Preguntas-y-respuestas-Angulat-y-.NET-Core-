@@ -1,17 +1,18 @@
-<div class="text-center">
-    <app-loading *ngIf="loading==true"></app-loading>
-</div>
 <div class="row">
-    <div class="col-lg-6">
+    <div class="text-center">
+        <app-loading *ngIf="loading==true"></app-loading>
+    </div>
+    <div class="col-lg-6 preggg">
         <h3 class="text-center">Listado de Preguntas</h3>
         <hr>
-        <div class="card mb-2" *ngFor="let pregunta of listPreguntas; let i=index">
+        <div class="card mb-2 jhk" *ngFor="let pregunta of listPreguntas; let i=index">
             <div class="card-header d-flex align-items-center">
-                <div style="width: 70%;">
-                    <h5>{{pregunta.descripcion}}</h5>
+                <div style="width: 60%;">
+                    <h5><b>{{i+1}})</b> {{pregunta.descripcion}}</h5>
                 </div>
-                <div style="width: 30%;">
-                    <button class="btn btn-primary btn-sm" (click)="pregunta.hide=!pregunta.hide">Mostrar</button>
+                <div style="width: 40%;" class="text-center">
+                    <button class="btn btn-primary btn-sm" (click)="pregunta.hide=!pregunta.hide" *ngIf="pregunta.hide==true">Expandir</button>
+                    <button class="btn btn-primary btn-sm" (click)="pregunta.hide=!pregunta.hide" *ngIf="pregunta.hide==false">Minimizar</button>
                     <button class="btn btn-danger btn-sm ms-2" (click)="eliminarPregunta(i)">Eliminar</button>
                 </div>
             </div>
@@ -31,11 +32,12 @@
             <h6>No hay preguntas para mostrar</h6>
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-6 ghfddfh">
         <h3 class="text-center">Nueva Pregunta</h3>
         <hr>
         <!-- primero llamo () el output, y al costado la funcion de este .ts  -->
         <app-nueva-pregunta (enviarPregunta)="guardarPregunta($event)"></app-nueva-pregunta>
     </div>
 </div>
+<button class="btn btn-secondary btn-lg btn-block btn-inicio" routerLink="/dashboard/nuevoCuestionario/paso1">Volver</button>
 <button class="btn btn-success btn-lg btnFinalizar" [disabled]="listPreguntas?.length==0" (click)="finalizarCuestionario()">Finalizar Cuestionario</button>

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bmwVObrdtYyk+tIxS8W9pWoUqDpVcoat6wa2zRhH8YfxZPzJ9vEGndZzqt6kQJUv4pByzWbyEZY6CS9WLYyq9g==",
+  "dgSpecHash": "6XpeW+Xjt+rwQ+6HoXU3RZST6rY0hBQ/y7FsoDjS4vriM4ckvCdO3YfjNyLMFUK3/vsy0cYhRwdOINck2Mdz4Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Sergio\\Desktop\\NetCore con Angular(Preguntas y respuestas)\\Proyecto para Github\\Back End\\Backend API\\Backend API.csproj",
   "expectedPackageFiles": [
@@ -49,6 +49,7 @@
     "C:\\Users\\Sergio\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\Sergio\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Sergio\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "C:\\Users\\Sergio\\.nuget\\packages\\npgsql\\7.0.1\\npgsql.7.0.1.nupkg.sha512",
     "C:\\Users\\Sergio\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\Sergio\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\Sergio\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",

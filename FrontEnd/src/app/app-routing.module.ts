@@ -27,22 +27,14 @@ const routes: Routes = [
     {path:'',component:BienvenidaComponent},
     {path:'register',component:RegisterComponent},
     {path:'login',component:LoginComponent},
-    {path:'ListCuestionarios',component:ListCuestionariosComponent},
-    {path:'pregunta',component:PreguntaComponent},
-    {path:'respuesta_del_cuestionario',component:RespuestaCuestionarioComponent},
-    {path:'ingresarNombre',component:IngresarNombreComponent}
+    //aca hago para que cuando abra ese url mediante el Lazy loading recien importe el modulo de ListCuestioanrio
+    {path:'ListCuestionarios',component:ListCuestionariosComponent,
+        loadChildren:()=>import('./components/inicio/list-cuestionarios/list-cuestionarios.module')
+        .then(x=>x.ListCuestionariosModule)}
   ]},
-  {path:'dashboard',component:DashboardComponent, canActivate:[AuthGuard] , children:[
-    {path:'',component:CuestionariosComponent},
-    {path:'cambiarPassword',component:CambiarPasswordComponent},
-    {path:'verCuestionario/:id',component:CuestionarioComponent},//importante para los que requieran algo en la url
-    {path:'estadisticas/:id',component:EstadisticasComponent},
-    {path:'detalleRespuesta/:id',component:DetalleRespuestaComponent},
-    {path:'nuevoCuestionario',component:NuevoCuestionarioComponent,children:[
-      {path:'paso1',component:Paso1Component},
-      {path:'paso2',component:Paso2Component}
-    ]}
-  ]},
+  {path:'dashboard',component:DashboardComponent, canActivate:[AuthGuard] , 
+        loadChildren:()=>import('./components/dashboard/dashboard.module')
+        .then(x=>x.DashboardModule)},
   
   //esto siempre ponerlo en el ultimo
   {path:'**',redirectTo:'/inicio',pathMatch:'full'}//en caso que no encuentre una direccion se dirige a ese link

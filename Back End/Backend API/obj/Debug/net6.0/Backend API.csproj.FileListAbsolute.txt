@@ -93,3 +93,4 @@ C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto par
 C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Backend API\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Backend API\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Backend API\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\Sergio\Desktop\NetCore con Angular(Preguntas y respuestas)\Proyecto para Github\Back End\Backend API\bin\Debug\net6.0\Npgsql.dll

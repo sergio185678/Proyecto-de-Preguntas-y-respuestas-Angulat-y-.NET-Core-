@@ -18,5 +18,6 @@ namespace Demo.Entities
         public int CuestionarioId { get; set; }
         public Cuestionario? Cuestionario { get; set; }
         public List<RespuestaCuestionarioDetalle> ListRtaCuestionarioDetalle { get; set; }
+        
     }
 }

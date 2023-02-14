@@ -10,7 +10,7 @@
 }
 .corr{
     float: right;
-    color: blue;
+    color: green;
     font-size: 27px;
     margin-left: -27px;
 }
@@ -19,4 +19,21 @@
     color: red;
     font-size: 27px;
     margin-left: -27px;
+}
+.btn-volver{
+    background-color: rgb(160, 160, 160);
+    border-color: rgb(160, 160, 160);
+    width: 150px;
+}
+.btn:hover{
+    border-width: 3px;
+    font-weight: bold;
+}
+.list-group-item-success,.list-group-item-danger{
+    font-weight: bold;
+}
+h1{
+    font-style: italic;
+    font-family: Georgia, serif;
+    font-weight: bold;
 }

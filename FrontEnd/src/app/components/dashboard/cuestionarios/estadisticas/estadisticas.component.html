@@ -1,27 +1,29 @@
-<div class="text-center">
-    <app-loading *ngIf="loading==true"></app-loading>
+<div class="sfsfs">
+    <div class="text-center">
+        <app-loading *ngIf="loading==true"></app-loading>
+    </div>
+    <table class="table fs text-center" *ngIf="lisRes_Cuestionario.length>0 && loading==false">
+        <thead class="table-warning">
+            <tr>
+                <th scope="col">Participante</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Hora</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cuestionarioRespuesta of lisRes_Cuestionario" class="table-info">
+                <td>{{cuestionarioRespuesta.nombreParticipante|uppercase}}</td>
+                <td>{{cuestionarioRespuesta.fecha|date:'dd/MM/yyyy'}}</td>
+                <td>{{cuestionarioRespuesta.fecha|date:'HH:mm'}}</td>
+                <td>
+                    <div class="float-rigth">
+                        <span class="material-icons sear_icon" routerLink="/dashboard/detalleRespuesta/{{cuestionarioRespuesta.id}}">search</span>
+                        <span class="material-icons dele_icon" (click)="eliminarRespuestaCuestioanrio(cuestionarioRespuesta.id)">delete</span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 *ngIf="lisRes_Cuestionario.length==0 && loading==false" class="text-center">No hay respuestas al cuestionario para mostrar</h3>
 </div>
-<table class="table" *ngIf="lisRes_Cuestionario.length>0 && loading==false">
-    <thead>
-        <tr>
-            <th scope="col">Participante</th>
-            <th scope="col">Fecha</th>
-            <th scope="col">Hora</th>
-            <th scope="col"></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let cuestionarioRespuesta of lisRes_Cuestionario">
-            <td>{{cuestionarioRespuesta.nombreParticipante|uppercase}}</td>
-            <td>{{cuestionarioRespuesta.fecha|date:'dd/MM/yyyy'}}</td>
-            <td>{{cuestionarioRespuesta.fecha|date:'HH:mm'}}</td>
-            <td>
-                <div class="float-rigth">
-                    <span class="material-icons sear_icon" routerLink="/dashboard/detalleRespuesta/{{cuestionarioRespuesta.id}}">search</span>
-                    <span class="material-icons dele_icon" (click)="eliminarRespuestaCuestioanrio(cuestionarioRespuesta.id)">delete</span>
-                </div>
-            </td>
-        </tr>
-    </tbody>
-</table>
-<h3 *ngIf="lisRes_Cuestionario.length==0 && loading==false">No hay respuestas al cuestionario para mostrar</h3>

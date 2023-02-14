@@ -1,21 +1,26 @@
-<div class="row">
+<div class="row sffs">
     <div class="col-lg-6 offset-lg-3">
-        <h3 class="text-center">Datos del Cuestionario</h3>
+        <h3 class="text-center pt-3 dddfd">Creación del Cuestionario</h3>
         <br>
         <form [formGroup]="datosCuestionario" (ngSubmit)="pasoUno()">
             <div class="form-label">
-                <input type="text" class="form-control" placeholder="Ingrese titulo del cuestionario" formControlName="titulo">
+                <h5>Título:</h5>
+                <input type="text" class="form-control" placeholder="Ingrese un título al cuestionario" formControlName="titulo">
                 <div class="text-danger" *ngIf="datosCuestionario.get('titulo')?.hasError('required') && datosCuestionario.get('titulo')?.touched">
-                    El titulo <strong> es requerido </strong>
+                    El título <strong> es requerido </strong>
                 </div>
-            </div>
+            </div><br>
             <div class="form-label">
-                <textarea rows="3" placeholder="Ingrese descripción del cuestionario" formControlName="descripcion" class="form-control"></textarea>
+                <h5>Descripción:</h5>
+                <textarea rows="3" placeholder="Ingrese una descripción al cuestionario" formControlName="descripcion" class="form-control"></textarea>
                 <div class="text-danger" *ngIf="datosCuestionario.get('descripcion')?.hasError('required') && datosCuestionario.get('descripcion')?.touched">
                     La descripción <strong> es requerido </strong>
                 </div>
             </div>
-            <button class="btn btn-success float-end" [disabled]="datosCuestionario.invalid">Siguiente</button>
+            <div class="text-center m-5">
+                <button class="btn btn-secondary btn-lg btn-block mx-5" routerLink="/dashboard/">Volver</button>
+                <button class="btn btn-success btn-lg btn-block mx-5" [disabled]="datosCuestionario.invalid">Siguiente</button>
+            </div>
         </form>
     </div>
 </div>

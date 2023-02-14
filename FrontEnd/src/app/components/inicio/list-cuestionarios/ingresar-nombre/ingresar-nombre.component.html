@@ -1,11 +1,13 @@
 <div class="container">
-    <div class="card text-center" style="width: 100%; padding: 21px;">
+    <div class="card text-center" style="width: 70%; padding: 50px;">
+        <h2>Ingresar Nombre</h2><br>
         <div class="col-lg-6 offset-lg-3">
             <input id="nombre" type="text" class="form-control form-control-lg" placeholder="Ingrese su nombre" (keyup)=actualizar()>
         </div>
+        <br>
         <div class="mt-auto" style="padding-top:25px;">
-            <button class="btn btn-primary btn-lg" routerLink="/inicio/ListCuestionarios">VOLVER</button>
-            <button id="boton_sig" class="btn btn-primary btn-lg btn-sig" (click)="siguiente()" disabled>SIGUIENTE</button>
+            <button class="btn btn-secondary btn-lg btn-volver" routerLink="/inicio/ListCuestionarios">VOLVER</button>
+            <button id="boton_sig" class="btn btn-primary btn-lg btn-sig" (click)="siguiente()" disabled>Iniciar</button>
         </div>
     </div>
 </div>

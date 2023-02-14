@@ -1,19 +1,21 @@
 <form [formGroup]="nuevaPregunta">
     <div class="form-label input-group-lg">
-        <input type="text" class="form-control" placeholder="Ingrese Pregunta" formControlName="titulo">
+        <input type="text" class="form-control" placeholder="Ingrese una pregunta" formControlName="titulo">
         <span class="text-danger" *ngIf="nuevaPregunta.get('titulo')?.hasError('required') && nuevaPregunta.get('titulo')?.touched">
             La pregunta es <strong>requerida</strong>
         </span>
     </div>
     <br>
+    <p class="mb-3">Ingrese las respuestas y seleccione la correcta</p>
     <!-- Estoy utilizando FormArray -->
     <div formArrayName="respuestas" *ngFor="let item of getRespuestas.controls; let i=index">
-        <div class="input-group mb-1" [formGroupName]="i">
-            <input type="text" class="form-control" placeholder="Respuesta {{i+1}}" formControlName="descripcion">
-            <!-- Para unir los 2 el texto con el boton de forma perfecta -->
+        <div class="input-group mb-2" [formGroupName]="i">
             <div class="input-group-text">
                 <input type="radio" name="esCorrecta" formControlName="esCorrecta" [value]="i" (change)="setRespuestaValida(i)">
             </div>
+            <input type="text" class="form-control" placeholder="Respuesta {{i+1}}" formControlName="descripcion">
+            <!-- Para unir los 2 el texto con el boton de forma perfecta -->
+            
             <span class="material-icons delete-icon" (click)="eliminarRespuesta(i)">
                 delete
             </span>
@@ -27,7 +29,5 @@
     <span class="material-icons add-icon" (click)="agregarRespuesta()">
         add
     </span>
-    <br>
-    <br>
-    <button class="btn btn-primary float-end" [disabled]="nuevaPregunta.invalid" (click)="agregarPregunta()">Agregar</button>
+    <button class="btn btn-primary float-start" [disabled]="nuevaPregunta.invalid" (click)="agregarPregunta()">Agregar</button>
 </form>
