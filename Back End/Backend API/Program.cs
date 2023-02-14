@@ -59,7 +59,7 @@ app.UseAuthorization();
 //permite habilitar que el front utilize esto
 app.UseCors(options =>
 {
-    options.WithOrigins("http://localhost:4200");
+    options.WithOrigins("https://questimake.netlify.app");
     options.AllowAnyMethod();
     options.AllowAnyHeader();
 });
